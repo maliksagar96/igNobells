@@ -1,0 +1,178 @@
+/*
+
+
+******************Table of contents******************
+
+
+1 = googlefonts
+2 = varibles
+
+
+*/
+
+/*--------------------------------------
+    Google Fonts
+---------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Poppins:wght@300;400;500;600;700&family=Roboto+Condensed&family=Ubuntu:wght@400;500;700&display=swap');
+
+/*--------------------------------------
+variables
+---------------------------------------*/
+
+:root{
+    --orange: hsl(36, 80%, 50%);
+    --white:hsl(0,0%,100%);
+    --WHITE:hsl(0,0%,100%);
+    --BLACK:hsl(0,0,0);
+    --black-90:hsl(0,0,10%);
+    --black-70:hsl(0,0,30%);
+    --yellow-light:hsl(44, 95%, 83%);
+    --green-light:hsl(158, 68%, 75%);
+    --red-light:hsl(0, 84%, 80%);
+    --orange-light:hsl(22, 85%, 80%);
+    --select-box-bg-color:hsl(0,0,100%);
+    --border-color-1:hsl(0,0, 90%);
+}
+
+/*--------------------------------------
+ base
+---------------------------------------*/
+body{
+    background-color:var(--body-bg-color) ;
+    font-family: 'Poppins', sans-serif;
+/*    font-size: 16px;*/
+    font-weight: 300;
+    color:var(--black-70);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+a{
+    color:var(--main-color);
+    text-decoration: none;
+}
+
+a:hover{
+    color: var(--main-color);
+}
+
+img{
+    max-width: 100%;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* When selecting with right click drag, colors the text with the
+color specified and gives background the color specified.*/
+::selection{
+    color: var(--WHITE);
+    background-color: var(--main-color);
+}
+
+/*--------------------------------------
+Header
+---------------------------------------*/
+
+.header{
+    border-bottom: 1px solid var(--border-color-2);
+}
+
+.header-logo a{
+    font-size: 2em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--black-70);
+}
+
+.header-logo span{
+    color: var(--main-color);
+}
+
+.header .menu-item{
+    display: inline-block;
+    margin-left: 2em;
+}
+
+.header .menu-item >a {
+    display: block;
+    padding: 1.5em 0;
+    font-weight: 400;
+    color: var(--black-90);
+    text-transform: capitalize;
+    transition: color 0.3s ease;
+}
+.header .menu-item:hover >a{
+    color: var(--main-color); 
+} 
+
+.header-backdrop,
+.header-close-btn,
+.header-hamburger-btn{
+    display: none;
+}
+
+/*--------------------------------------
+Banner Section
+---------------------------------------*/
+
+.banner-section{
+    padding: 5em 0;/*may need adjustment*/
+    min-height:860px;
+
+}
+/*Class specified for banner image particularly*/
+.bnrImg {
+    position: relative;
+    z-index: 1;
+}
+
+.circular-img{
+    
+    margin: auto;
+    max-width: 480px;
+    position: relative;
+    z-index:1;
+}
+
+.circular-img-inner{
+    text-align: center;
+    border-radius: 0 0 180px 180px;
+}
+
+.circular-img-circle{
+    height: 30em;
+    width: 30em;
+    background-color: red;
+    position:absolute;
+    left: -2em;
+    bottom: 3em;
+    border-radius:50%;
+}
+
+.banner-section .circular-img-circle{
+    background-color: var(--red-light);
+}
+
+
+/*--------------------------------------
+Custom bootstrap
+---------------------------------------*/
+
+.container {
+    --bs-gutter-x: 1em; /*Gutters are the paddings between columns*/
+    max-width: 1500px;
+}
+
+.row{
+    --bs-gutter-x: 10em;
+}
+
+/*--------------------------------------
+Custom classes in between
+---------------------------------------*/
+
