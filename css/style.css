@@ -66,6 +66,11 @@ ul{
     margin: 0;
     padding: 0;
 }
+/*mb-3 stands for margin bottom by the way. 3 can vary from 0 to 6 i guess*/
+h1, h2, h3, h4, h5, h6{
+    color:var(--black-90);
+    line-height: 1.3;
+}
 
 /* When selecting with right click drag, colors the text with the
 color specified and gives background the color specified.*/
@@ -123,9 +128,19 @@ Banner Section
 .banner-section{
     padding: 5em 0;/*may need adjustment*/
     min-height:860px;
-
 }
-/*Class specified for banner image particularly*/
+
+.banner-text h1{
+    font-size: 3.2em;
+    font-weight: 550;
+}
+
+.banner-text h2{
+    font-size: 2.2em;
+    color: var(--main-color);
+}
+
+/*Banner Image and banner circle --> Behind the image.*/
 .bnrImg {
     position: relative;
     z-index: 1;
@@ -147,7 +162,6 @@ Banner Section
 .circular-img-circle{
     height: 30em;
     width: 30em;
-    background-color: red;
     position:absolute;
     left: -2em;
     bottom: 3em;
