@@ -1,15 +1,3 @@
-/*
-
-
-******************Table of contents******************
-
-
-1 = googlefonts
-2 = varibles
-
-
-*/
-
 /*--------------------------------------
     Google Fonts
 ---------------------------------------*/
@@ -38,10 +26,12 @@ variables
 /*--------------------------------------
  base
 ---------------------------------------*/
+/*Body defualt text is 16px, so I have kept it that way and used ems and rems
+(rarely or never i guess) to scale text accordingly.
+*/
 body{
     background-color:var(--body-bg-color) ;
     font-family: 'Poppins', sans-serif;
-/*    font-size: 16px;*/
     font-weight: 300;
     color:var(--black-70);
     min-height: 100vh;
@@ -142,15 +132,25 @@ Banner Section
 
 /*Banner Image and banner circle --> Behind the image.*/
 .bnrImg {
-    position: relative;
     z-index: 1;
+    position:absolute;
+    left: 25%;
+    bottom: 0;
 }
 
-.circular-img{
-    
+.circular-img-circle{
+    height: 30em;
+    width: 30em;
+    position:absolute;
+    left: 20%;
+    bottom: 0;
+    border-radius:50%;
+}
+
+
+.circular-img{ 
     margin: auto;
     max-width: 480px;
-    position: relative;
     z-index:1;
 }
 
@@ -159,19 +159,40 @@ Banner Section
     border-radius: 0 0 180px 180px;
 }
 
-.circular-img-circle{
-    height: 30em;
-    width: 30em;
-    position:absolute;
-    left: -2em;
-    bottom: 3em;
-    border-radius:50%;
-}
-
 .banner-section .circular-img-circle{
     background-color: var(--red-light);
 }
 
+
+/*--------------------------------------
+buttons
+---------------------------------------*/
+.btn-theme{
+    background-color: var(--main-color);
+    color: var(--WHITE);
+    font-size: 1em;
+    text-transform: capitalize;
+    font-weight: 500;
+    padding:1em 2em;
+    transition: all 0.3s ease;
+}
+
+.btn-theme:hover{
+    color: var(--WHITE);
+    background-color: var(--button-hover-color);
+}
+
+.btn-theme:focus{
+    box-shadow:0 0 8px var(--main-color);
+}
+
+.btn-block{
+    width: 100%;    
+}
+
+.btn-form{
+    height: 4em;
+}
 
 /*--------------------------------------
 Custom bootstrap
@@ -187,6 +208,127 @@ Custom bootstrap
 }
 
 /*--------------------------------------
-Custom classes in between
+box
 ---------------------------------------*/
 
+.box{
+    background-color: var(--white); 
+    padding: 2em 2em;
+}
+
+/*--------------------------------------
+forms
+---------------------------------------*/
+.form-group{
+    margin-bottom: 1.5em;
+    position: relative;
+}
+
+.form-control{
+    border-color: var(--border-color-2);
+    color: var(--black-90);
+    background-color: transparent;
+}
+
+.form-control:focus{
+    background-color: transparent;
+    border-color: var(--border-color-1);
+    color: var(--black-90);
+    box-shadow: none;
+}
+
+/*--------------------------------------
+Breadcrumbs
+---------------------------------------*/
+
+.breadrumb-nav{
+ padding: 10px 0;   
+}
+
+.breadcrumb-nav .breadcrumb-item{
+    font-size: 1em;
+    text-transform: capitalize;
+}
+
+.breadcrumb-nav .breadcrumb-item + .breadcrumb-item::before,
+.breadcrumb-nav .breadcrumb-item.active{
+    color: var(--black-70);
+}
+
+/*--------------------------------------
+Footer
+---------------------------------------*/
+
+.footer-top{
+    
+    border-top: 1px solid var(--border-color-2);
+}
+
+.footer-bottom{
+  
+    border-top: 1px solid var(--border-color-2);
+}
+
+.outerfooter{
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    
+}
+
+.social-links ul{
+    display: flex;
+    margin: auto;
+}
+
+.social-items{
+    list-style: none;
+    padding: 0 3em;
+}
+
+.social-items a{
+    
+    font-size: 2em;
+}
+
+.quick-links{
+    display: flex;
+    margin: auto;
+}
+
+.quick-links ul{
+    display: flex;
+ 
+}
+
+.quick-items{
+    list-style:none;
+    margin: auto;
+}
+.quick-items a{
+    font-size: 1em;
+    color: var(--black-70);    
+}
+
+.quick-items a:hover{
+    color: var(--main-color);
+    transition: color 0.4s ease;
+}
+
+/*--------------------------------------
+Miscallaneous
+---------------------------------------*/
+
+#contactText{   
+    font-size: 1.2em;
+    font-weight: 2em;
+}
+.envLogo{
+    margin-left: 2em;
+}
+
+.mediaIcons li{
+    display: inline;
+}
