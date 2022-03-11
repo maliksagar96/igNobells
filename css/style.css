@@ -30,7 +30,13 @@ variables
 (rarely or never i guess) to scale text accordingly.
 */
 body{
-    background-color:var(--body-bg-color) ;
+    /*background-color: (var(--WHITE));*/
+    background-color:var(--body-bg-color);
+    /*background-image: linear-gradient(#fcf3f3,#ffddee);*/
+    
+    /*background-image: linear-gradient(#fcf3f3,#FFC2E0);*/
+    /*background-image: linear-gradient(#fcf3f3, #ffb3d9);*/
+   
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
     color:var(--black-70);
@@ -134,13 +140,13 @@ Banner Section
 .bnrImg {
     z-index: 1;
     position:absolute;
-    left: 25%;
+    left: 24%;
     bottom: 0;
 }
 
 .circular-img-circle{
-    height: 30em;
-    width: 30em;
+    height: 28em;
+    width: 28em;
     position:absolute;
     left: 20%;
     bottom: 0;
@@ -160,7 +166,100 @@ Banner Section
 }
 
 .banner-section .circular-img-circle{
-    background-color: var(--red-light);
+   background-color: var(--red-light);
+}
+
+/*--------------------------------------
+Ideology
+---------------------------------------*/
+
+.ideology{
+    text-align: center;
+}
+
+/*--------------------------------------
+About Us
+---------------------------------------*/
+.about-us{
+  /*  background-image: linear-gradient(#fcf3f3,#ffddee);*/
+  /*  background-color: #ffddee;*/
+    text-align: center;
+}
+
+/*--------------------------------------
+Footer
+---------------------------------------*/
+
+.foot{
+   /*background-color: #ffddee;*/
+   /*background-color:#c75f82;*/
+   /*background-image: linear-gradient(#c75f82,#FFC2E0);*/
+   /*background-image: linear-gradient(to bottom right, #ffddee,#c75f82);*/
+    background-color: var(--footer-color);
+    color: var(--WHITE);
+}
+
+.outerfooter{
+    text-align: center;
+}
+
+.iiserLogo{
+    max-width: 330px;
+    max-height: 330px;
+}
+
+#iiseraddress{
+    transform: translateX(-35%);
+    margin-top:2em;
+    line-height: 2em;
+    height: 2em;
+}
+.social-links {
+    display: flex;
+    
+}
+
+.social-links ul{
+    display: flex;
+    margin: auto;
+}
+
+.social-items{
+    list-style: none;
+    padding: 0 3em;
+}
+
+.social-items a{
+
+    font-size: 2em;
+}
+
+.social-items a:hover{
+     
+}
+
+.quick-links{
+    display: flex;
+    margin: auto;
+}
+
+.quick-links ul{
+    display: flex;
+ 
+}
+
+.quick-items{
+    list-style:none;
+    margin: auto;
+}
+.quick-items a{
+    font-size: 1em;
+    color: var(--black-70);    
+}
+
+.quick-items a:hover{
+    color: var(--main-color);
+    transition: color 0.4s ease;
 }
 
 
@@ -168,7 +267,8 @@ Banner Section
 buttons
 ---------------------------------------*/
 .btn-theme{
-    background-color: var(--main-color);
+   background-color: var(--main-color);
+    /*background-color:#574142 ;*/
     color: var(--WHITE);
     font-size: 1em;
     text-transform: capitalize;
@@ -183,7 +283,7 @@ buttons
 }
 
 .btn-theme:focus{
-    box-shadow:0 0 8px var(--main-color);
+    box-shadow:0px 0px 8px var(--main-color);
 }
 
 .btn-block{
@@ -216,6 +316,18 @@ box
     padding: 2em 2em;
 }
 
+.paraBox{
+    border: 1px solid var(--border-color-3);
+
+    /*
+    border-top: 1px solid red;
+    border-left:1px solid red;
+    border-right:1px solid red;
+    border-bottom:1px solid red;
+    */
+   /* padding: 1em 1em;*/
+}
+
 /*--------------------------------------
 forms
 ---------------------------------------*/
@@ -237,6 +349,11 @@ forms
     box-shadow: none;
 }
 
+.testTxt:focus{
+    color: var(--WHITE);
+    border-color: var(--WHITE);    
+}
+
 /*--------------------------------------
 Breadcrumbs
 ---------------------------------------*/
@@ -255,67 +372,6 @@ Breadcrumbs
     color: var(--black-70);
 }
 
-/*--------------------------------------
-Footer
----------------------------------------*/
-
-.footer-top{
-    
-    border-top: 1px solid var(--border-color-2);
-}
-
-.footer-bottom{
-  
-    border-top: 1px solid var(--border-color-2);
-}
-
-.outerfooter{
-    text-align: center;
-}
-
-.social-links {
-    display: flex;
-    
-}
-
-.social-links ul{
-    display: flex;
-    margin: auto;
-}
-
-.social-items{
-    list-style: none;
-    padding: 0 3em;
-}
-
-.social-items a{
-    
-    font-size: 2em;
-}
-
-.quick-links{
-    display: flex;
-    margin: auto;
-}
-
-.quick-links ul{
-    display: flex;
- 
-}
-
-.quick-items{
-    list-style:none;
-    margin: auto;
-}
-.quick-items a{
-    font-size: 1em;
-    color: var(--black-70);    
-}
-
-.quick-items a:hover{
-    color: var(--main-color);
-    transition: color 0.4s ease;
-}
 
 /*--------------------------------------
 Miscallaneous
@@ -331,4 +387,54 @@ Miscallaneous
 
 .mediaIcons li{
     display: inline;
+}
+
+.top-border{
+   /*   margin-top:2em;*/
+    border-top: 1px solid var(--border-color-2);
+}
+
+.bottom-border{
+    padding: 8px 8px;
+    margin-top: 1em;
+    border-top: 1px solid var(--border-color-2);
+}
+
+.heavyPara{
+
+    font-weight: 400;
+    font-size: 1.1em;
+    text-align: left;
+    margin-top: 1em;
+}
+
+.mainColor{
+    color:var(--main-color);
+}
+
+.bk70{
+    font-weight: 400;
+}
+
+.centerTest{
+    width: 100%;
+    height: 100%;
+  /*  background-color: #ffddee;*/
+    text-align: center;
+}
+
+.centerText{
+    
+    margin: 1em 1em;
+    padding: 2em 2em;
+}
+
+.pad1{
+    padding: 1em 1em;
+}
+
+
+.testTxt::placeholder {
+    color: var(--WHITE);
+    opacity: 1; 
 }

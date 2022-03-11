@@ -1,10 +1,13 @@
 :root{
     --hue-value-1: 0;
     --hue-valeu-2: 230;
+    --hue-value-3: 340;
     --main-color:hsl(var(--hue-value-1), 74%, 61%);
+    --footer-color:#666666;
     --button-hover-color:hsl(var(--hue-value-1), 57%, 53%);
-    --body-bg-color:hsl(var(--hue-value-1), 63%, 97%);
+    --body-bg-color:hsl(var(--hue-value-1), 63%, 94%);  /*Hex is fcf3f3*/
     --border-color-2:hsl(var(--hue-value-1), 40%, 93%);
+    --border-color-3:hsl(var(--hue-value-1), 44%, 60%); 
     --shadow: 0 0 10px hsl(var(--hue-valeu-1), 40%, 90%);
     --body-gradient-bg-color-1: hsla(var(--hue-valeu-1), 100%, 50%, 0.2);
     --body-gradient-bg-color-2: hsla(var(--hue-valeu-2), 100%, 50%, 0.2);
