@@ -62,6 +62,7 @@ ul{
     margin: 0;
     padding: 0;
 }
+
 /*mb-3 stands for margin bottom by the way. 3 can vary from 0 to 6 i guess*/
 h1, h2, h3, h4, h5, h6{
     color:var(--black-90);
@@ -97,19 +98,45 @@ Header
 .header .menu-item{
     display: inline-block;
     margin-left: 2em;
+    position: relative;
 }
 
-.header .menu-item >a {
+.header .menu-item::after{
+    content: "";
+    
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--main-color);
+
+    transform:translateY(-1200%) scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-in;
+}
+
+.header .menu-item:hover::after{
+    
+    transform-origin: left;
+    transform:translateY(-1200%) scaleX(1);
+}
+
+.header .menu-item a{
     display: block;
     padding: 1.5em 0;
     font-weight: 400;
     color: var(--black-90);
     text-transform: capitalize;
-    transition: color 0.3s ease;
+    transition: color 0.4s ease;
+
 }
-.header .menu-item:hover >a{
+
+.header .menu-item a:hover{
     color: var(--main-color); 
 } 
+
+  
 
 .header-backdrop,
 .header-close-btn,
@@ -170,21 +197,78 @@ Banner Section
 }
 
 /*--------------------------------------
-Ideology
+About Us
 ---------------------------------------*/
 
-.ideology{
+
+
+.verticalCenter{
+   /* margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);*/
+    display: table-cell;
+    vertical-align: middle;
     text-align: center;
+}
+
+#aboutUsCenter{
+    display: table; 
+    max-height: 400px; 
+    overflow: hidden;
+}
+
+#abtusheading{
+    display: table-cell; vertical-align: middle;
+}
+
+
+.centerHeading{
+    text-align: center;
+}
+
+
+#event1{
+    margin-top:6em;
+    margin-bottom: 6em;
+    width: 100%;
+    max-height: 70%; 
 }
 
 /*--------------------------------------
-About Us
+Events
 ---------------------------------------*/
-.about-us{
-  /*  background-image: linear-gradient(#fcf3f3,#ffddee);*/
-  /*  background-color: #ffddee;*/
-    text-align: center;
+.events{
+
 }
+
+.gatherings{
+    margin-top:2em;
+}
+
+#foodImage{
+    height: 400px;
+}
+
+/*--------------------------------------
+Contact
+---------------------------------------*/
+
+.contact{
+    margin-top: 2em;
+}
+#ashImage{
+    margin-left: 5em;
+}
+/*
+.contact img{
+    float: left;
+}*/
+
+/*.contact h3{
+    float: right;
+}*/
 
 /*--------------------------------------
 Footer
@@ -195,7 +279,10 @@ Footer
    /*background-color:#c75f82;*/
    /*background-image: linear-gradient(#c75f82,#FFC2E0);*/
    /*background-image: linear-gradient(to bottom right, #ffddee,#c75f82);*/
-    background-color: var(--footer-color);
+    /*background-color: var(--footer-color-2);*/
+    margin-top: 2em;
+    padding-top:2em;
+    background-color: hsl(0,0%,10%);
     color: var(--WHITE);
 }
 
@@ -266,8 +353,41 @@ Footer
 /*--------------------------------------
 buttons
 ---------------------------------------*/
+.btn{
+    position: relative;
+    border: 0;
+    z-index: 1;
+}
+
+.btn::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    /*background: #a3666f;*/
+    background: #e19992;
+    /*background: #f3eed9;*/
+    /*background: #798897;*/
+    /*background: #df5b13;*/
+    /*background: #1a648e;*/
+    /*background: #574240;*/
+
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-in;
+}
+
+.btn:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
 .btn-theme{
    background-color: var(--main-color);
+   /*background-color: #5f0000;*/
     /*background-color:#574142 ;*/
     color: var(--WHITE);
     font-size: 1em;
@@ -278,7 +398,7 @@ buttons
 }
 
 .btn-theme:hover{
-    color: var(--WHITE);
+    color: black;
     background-color: var(--button-hover-color);
 }
 
