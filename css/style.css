@@ -230,12 +230,20 @@ About Us
 
 
 #event1{
-    margin-top:6em;
-    margin-bottom: 6em;
+    margin-top:3em;
+    margin-bottom: 3em;
     width: 100%;
-    max-height: 70%; 
+    max-height: 100%; 
 }
 
+.carousel-item{
+    transition: transform 2.5s ease-in-out;  
+}
+
+.carousel-fade .active.carousel-item-start,
+.carousel-fade .active.carousel-item-end {
+  transition: opacity 0s 2.6s;
+}
 /*--------------------------------------
 Events
 ---------------------------------------*/
@@ -291,16 +299,26 @@ Footer
 }
 
 .iiserLogo{
+    float: left;
     max-width: 330px;
     max-height: 330px;
 }
 
 #iiseraddress{
-    transform: translateX(-35%);
+    text-align: left;
     margin-top:2em;
     line-height: 2em;
     height: 2em;
 }
+
+.iiserAdd{
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+    /*float: left;*/
+}
+
+
 .social-links {
     display: flex;
     
