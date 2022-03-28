@@ -228,14 +228,6 @@ About Us
     text-align: center;
 }
 
-
-#event1{
-    margin-top:3em;
-    margin-bottom: 3em;
-    width: 100%;
-    max-height: 100%; 
-}
-
 .carousel-item{
     transition: transform 2.5s ease-in-out;  
 }
@@ -299,23 +291,44 @@ Footer
 }
 
 .iiserLogo{
-    float: left;
     max-width: 330px;
     max-height: 330px;
 }
 
-#iiseraddress{
-    text-align: left;
-    margin-top:2em;
-    line-height: 2em;
-    height: 2em;
-}
-
 .iiserAdd{
     display: flex;
-    justify-content: center; /* align horizontal */
-    align-items: center; /* align vertical */
-    /*float: left;*/
+    /* Horizontal align */
+    justify-content: center;
+    /* vertical align */
+    align-items: center;    
+    transform: translateX(-20%);
+    
+}
+
+
+@media screen and (max-width: 767px) {
+    
+    .iiserAdd{
+        display: flex;
+        /* Horizontal align */
+        justify-content: center;
+        /* vertical align */
+        align-items: center;    
+        
+        transform: translateX(5%);
+    }
+}
+
+@media screen and (max-width: 599px) {
+    
+    .iiserAdd{
+        display: flex;
+        /* Horizontal align */
+        justify-content: center;
+        /* vertical align */
+        align-items: center;    
+        transform: translateX(5%);
+    }
 }
 
 
@@ -437,8 +450,11 @@ Custom bootstrap
 ---------------------------------------*/
 
 .container {
-    --bs-gutter-x: 1em; /*Gutters are the paddings between columns*/
-    max-width: 1500px;
+    /*Gutters are the paddings between columns*/
+    /* --bs-gutter-x: 1em;  */
+    /* max-width: 1500px; */
+    width: min(90%, 70.5rem);
+    margin-inline: auto;
 }
 
 .row{
