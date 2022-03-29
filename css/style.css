@@ -261,6 +261,29 @@ Contact
 #ashImage{
     margin-left: 5em;
 }
+
+.students {
+    /* display: flex; */
+}
+
+.students img{
+    margin-right: 1em;
+}
+
+.studentName{
+    font-weight: 400;
+    font-size: 1.2em;
+}
+
+/* 
+.stdImg{
+    float: left;
+} */
+
+.stdInfo{
+    word-wrap: break-word;
+}
+
 /*
 .contact img{
     float: left;
@@ -290,20 +313,21 @@ Footer
     text-align: center;
 }
 
-.iiserLogo{
+.iiserLogo {
+
     max-width: 330px;
     max-height: 330px;
-}
-
-.iiserAdd{
-    display: flex;
-    /* Horizontal align */
-    justify-content: center;
-    /* vertical align */
-    align-items: center;    
-    transform: translateX(-20%);
+    transform: translateX(-30%) translateY(-15%);
     
 }
+ 
+.iiserAdd{
+    /* display: flex;
+    justify-content: center;
+    align-items: center;    
+    transform: translateX(-20%); */
+    
+} 
 
 
 @media screen and (max-width: 767px) {
@@ -314,7 +338,6 @@ Footer
         justify-content: center;
         /* vertical align */
         align-items: center;    
-        
         transform: translateX(5%);
     }
 }
@@ -363,7 +386,6 @@ Footer
 
 .quick-links ul{
     display: flex;
- 
 }
 
 .quick-items{
@@ -550,7 +572,6 @@ Miscallaneous
 
 .bottom-border{
     padding: 8px 8px;
-    margin-top: 1em;
     border-top: 1px solid var(--border-color-2);
 }
 
