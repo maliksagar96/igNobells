@@ -66,7 +66,7 @@ ul{
 /*mb-3 stands for margin bottom by the way. 3 can vary from 0 to 6 i guess*/
 h1, h2, h3, h4, h5, h6{
     color:var(--black-90);
-    line-height: 1.3;
+    line-height: 1.2;
 }
 
 /* When selecting with right click drag, colors the text with the
@@ -167,7 +167,8 @@ Banner Section
 .bnrImg {
     z-index: 1;
     position:absolute;
-    left: 24%;
+    transform:  translateX(-45%);
+    /*left: 24%;*/
     bottom: 0;
 }
 
@@ -175,7 +176,8 @@ Banner Section
     height: 28em;
     width: 28em;
     position:absolute;
-    left: 20%;
+    transform: translateX(-10%);
+    /*left: 20%;*/
     bottom: 0;
     border-radius:50%;
 }
@@ -232,6 +234,10 @@ About Us
     transition: transform 2.5s ease-in-out;  
 }
 
+.carousel-item img{
+    height:  55em;
+}
+
 .carousel-fade .active.carousel-item-start,
 .carousel-fade .active.carousel-item-end {
   transition: opacity 0s 2.6s;
@@ -263,27 +269,27 @@ Contact
 }
 
 .students {
-    /* display: flex; */
+    
 }
 
 .students img{
-    margin-right: 1em;
+    height: 30em;
+    width:  40em;
+    /*margin-right: 1em;*/
 }
 
 .studentName{
-    font-weight: 400;
+    font-weight: 600;
     font-size: 1.2em;
 }
-
-/* 
-.stdImg{
-    float: left;
-} */
 
 .stdInfo{
     word-wrap: break-word;
 }
 
+.email{
+    font-size: 10px;
+}
 /*
 .contact img{
     float: left;
@@ -581,6 +587,7 @@ Miscallaneous
     font-size: 1.1em;
     text-align: left;
     margin-top: 1em;
+    padding: none;
 }
 
 .mainColor{
