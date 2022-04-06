@@ -309,7 +309,7 @@ Footer
    /*background-image: linear-gradient(#c75f82,#FFC2E0);*/
    /*background-image: linear-gradient(to bottom right, #ffddee,#c75f82);*/
     /*background-color: var(--footer-color-2);*/
-    margin-top: 2em;
+    /* margin-top: 2em; */
     padding-top:2em;
     background-color: hsl(0,0%,10%);
     color: var(--WHITE);
@@ -620,3 +620,52 @@ Miscallaneous
     color: var(--WHITE);
     opacity: 1; 
 }
+
+/*---------------------------------------
+Events page
+---------------------------------------*/
+
+.events1 .container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+  }
+  
+  /* Top left text */
+  .top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+  }
+  
+  /* Top right text */
+  .top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+  }
+  
+  /* Bottom right text */
+  .bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+  }
+  
+  /* Centered text */
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .events1 .container .img {
+      width: 10%;
+  }
